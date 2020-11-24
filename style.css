@@ -10,7 +10,7 @@ body {
 }
 
 .sketchContainer {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     border: 1px solid black;
     width: 50%;

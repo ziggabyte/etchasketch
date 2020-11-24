@@ -10,12 +10,16 @@ function colorChange() {
 }
 
 // Ändrar alla rutors färg till vit 
-function clearAll() {
+function clearColor() {
     for (let i = 0; i < allSketchDivs.length; i++) {
         allSketchDivs[i].style.backgroundColor = "white";
     }
 }
 
+// Tar bort alla appended children från Sketch container
+function clearDivs() {
+    sketchContainer.innerHTML = " ";
+}
 
 // Läser in en siffra mellan 4 och 100 från användaren
 function readNumber() {
@@ -32,7 +36,8 @@ function readNumber() {
 
 // skapar nytt board utifrån användarens önskemål om storlek
 function makeNewBoard() {
-    clearAll();
+    clearColor();
+    clearDivs();
     divArray.length = 0;
     let side = readNumber();
     setDivs(side);  
@@ -69,7 +74,7 @@ setDivs(4);
 
 
 // Kör respektive funktion vid knappklick
-clearButton.addEventListener("click", clearAll);
+clearButton.addEventListener("click", clearColor);
 newButton.addEventListener("click", makeNewBoard);
 
 
