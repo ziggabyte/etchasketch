@@ -56,16 +56,16 @@ function setDivs(side) {
         allSketchDivs[i].addEventListener("mouseover", colorChange);
     }
 
-    divSize(side);
+    divSize(side); // Sätter bredd/höjd på div:arna
 }
 
+// tilldelar varje div en storlek i procent
 function divSize(side) {
-    let containerWidth = window.getComputedStyle(sketchContainer, null).getPropertyValue("width");
-    containerWidth = Number(containerWidth.replace(/\D/g,''));
+    let size = 100 / side;
+    let sizeString = size + "%";
 
     for (let i = 0; i < divArray.length; i++) {
-        divArray[i].style.width = Math.round(containerWidth/side);
-        divArray[i].style.height = Math.round(containerWidth/side);
+        divArray[i].style.width = sizeString;
     }
 }
 
@@ -76,5 +76,4 @@ setDivs(4);
 // Kör respektive funktion vid knappklick
 clearButton.addEventListener("click", clearColor);
 newButton.addEventListener("click", makeNewBoard);
-
 

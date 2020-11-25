@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     border: 0;
 }
@@ -10,16 +9,13 @@ body {
 }
 
 .sketchContainer {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
+    align-content: stretch;
     border: 1px solid black;
-    width: 50%;
-    height: 75vh;
+    width: 70vh;
+    height: 70vh;
     margin: auto;
-}
-
-.sketchDiv {
-    border: 1px solid black;
 }
 
 .newColor {
