@@ -1,28 +1,89 @@
-*{
+:root {
+    --sketch-bg-color: #e7e4df;
+    --button-bg-color: #FCE181;
+    --body-font-color: #9fedd7;
+    --button-font-color: #026670;
+}
+
+* {
     margin: 0;
     border: 0;
 }
 
 body {
+    background: #ffd89b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a0b7c7, #ffd89b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8aa1b1, #fad79e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: var(--body-font-color);
     width: 100%;
+    font-family: Righteous;
+}
+
+header {
     text-align: center;
+    width: 80vh;
+    border: 1px solid salmon;
+}
+
+h1 {
+    font-family: Modak;
+    font-weight: normal;
+    color: var(--button-font-color);
+    font-size: 5em;
+}
+
+.innerContainer {
+    padding: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .sketchContainer {
+    background-color: var(--sketch-bg-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    align-content: stretch;
-    border: 1px solid black;
-    width: 70vh;
-    height: 70vh;
-    margin: auto;
+    border-radius: 5%;
+    width: 80vh;
+    height: 80vh;
+    grid-area: right;
+    margin: 3vh;
 }
 
-.newColor {
-    background-color: peachpuff;
+.sketchDiv {
+    box-sizing: border-box;
+}
+
+.buttonContainer {
+    border: 3px solid blue;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80vh; 
+    height: 80vh;
+}
+
+.realButtonContainer {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 button {
-    border-style: none;
-    width: 20%;    
+    background-color: var(--button-bg-color);
+    color: var(--button-font-color);
+    height: 11em;
+    width: 11em;
+    margin: 3vh;
+}
+
+footer {
+    border: 1px solid green;
+    width: 80vh;
+    text-align: center;
 }

@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Nerko+One&family=Righteous&display=swap" rel="stylesheet">    
 </head>
+
 <body>
-    <header>
-        <h1>Etch-A-Sketch</h1>
-    </header>
     <main>
-        <button class="clearButton" id="clearButton">Clear board</button>
-        <button class="newButton" id="newButton">Make board of different size</button>
-        <section class="sketchContainer" id="sketchContainer">
+        <section class="innerContainer">
+            <section class="buttonContainer">
+                <header>
+                    <h1>Etch-a-Sketch</h1>
+                    <p>Use your arrow to draw on the board, click buttons to customize!</p>
+                </header>
+                <section class="realButtonContainer">
+                    <button class="clearButton" id="clearButton">Clear board</button>
+                    <button class="newButton" id="newButton">Make board of different size</button>
+                    <button class="randomColorButton" id="randomColorButton">Randomize color</button>
+                    <button class="gradualColorButton" id="gradualColorButton">Grayscale</button>
+                </section>
+                
+                <footer>
+                    <p>Part of The Odin Project curriculum.</p>
+                </footer>
+            </section>
+            <section class="sketchContainer" id="sketchContainer"></section>
         </section>
     </main>
-    <footer>
-        <p>Part of The Odin Project curriculum.</p>
-    </footer>
-    <script src="index.js"></script>
 
+    <script src="index.js"></script>
 </body>
+
 </html>
