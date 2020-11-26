@@ -16,20 +16,19 @@ body {
     background: linear-gradient(to right, #8aa1b1, #fad79e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: var(--body-font-color);
     width: 100%;
-    font-family: Righteous;
+    font-family: monospace;
 }
 
 header {
     text-align: center;
-    width: 80vh;
-    border: 1px solid salmon;
+    width: 70vh;
 }
 
 h1 {
     font-family: Modak;
     font-weight: normal;
     color: var(--button-font-color);
-    font-size: 5em;
+    font-size: 4em;
 }
 
 .innerContainer {
@@ -58,32 +57,34 @@ h1 {
 }
 
 .buttonContainer {
-    border: 3px solid blue;
     flex-direction: column;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 80vh; 
+    justify-content: space-evenly;
     height: 80vh;
 }
 
 .realButtonContainer {
-    border: 1px solid black;
+    height: 20vh;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 button {
+    font-family: monospace;
     background-color: var(--button-bg-color);
     color: var(--button-font-color);
-    height: 11em;
-    width: 11em;
-    margin: 3vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+    width: 12em;
+    height: 4em;
 }
 
 footer {
-    border: 1px solid green;
-    width: 80vh;
+    width: 70vh;
     text-align: center;
 }
