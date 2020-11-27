@@ -23,9 +23,17 @@ function assignMouseoverEvent(colorFunction) {
     }
 }
 
+// tar bort opacitets-property
+function removeOpacityProperty() {
+    let value = "opacity";
+    for (let i = 0; i < divArray.length; i++) {
+        divArray[i].style.removeProperty(value);
+    }
+}
+
 // Gör så rutorna i grid ändrar till startfärg
 function startColor() {
-    this.style.backgroundColor = "peachpuff";
+    this.style.backgroundColor = "#026670";
 }
 
 // Ändrar rutans färg till en random
@@ -105,12 +113,15 @@ makeDivs(4);
 // Kör respektive funktion vid knappklick
 clearButton.addEventListener("click", clearBoard);
 newButton.addEventListener("click", makeNewBoard);
-randomColorButton.addEventListener("click", () => { 
-    clearBoard(); 
-    removeLastMouseoverEvent(gradualColor); 
-    assignMouseoverEvent(randomColor); });
-gradualColorButton.addEventListener("click", () => { 
-    clearBoard(); 
-    removeLastMouseoverEvent(randomColor); 
-    assignMouseoverEvent(gradualColor); })
+randomColorButton.addEventListener("click", () => {
+    clearBoard();
+    removeLastMouseoverEvent(gradualColor);
+    removeOpacityProperty();
+    assignMouseoverEvent(randomColor);
+});
+gradualColorButton.addEventListener("click", () => {
+    clearBoard();
+    removeLastMouseoverEvent(randomColor);
+    assignMouseoverEvent(gradualColor);
+})
 
